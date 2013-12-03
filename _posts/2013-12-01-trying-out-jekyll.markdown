@@ -3,6 +3,7 @@ layout: post
 title:  "Trying out Jekyll..."
 date:   2013-12-01 01:05:03
 categories: jekyll
+published: false
 ---
 
 I'm going to try this out...
