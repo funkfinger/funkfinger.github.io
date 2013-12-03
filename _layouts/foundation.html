@@ -21,124 +21,58 @@
 
 
     <div class="row">
-        <div class="large-12 columns">
-          <!-- <div class="nav-bar right">
-           <ul class="button-group">
-             <li><a href="#" class="button">Link 1</a></li>
-             <li><a href="#" class="button">Link 2</a></li>
-             <li><a href="#" class="button">Link 3</a></li>
-             <li><a href="#" class="button">Link 4</a></li>
-            </ul>
-          </div> -->
-          <h1><a href="/">{{ site.name }} <small>{{ site.tagline }}</small></a></h1>
-          <hr />
-        </div>
+      <div class="large-12 columns">
+        <h1><a href="/">{{ site.name }} <small>{{ site.tagline }}</small></a></h1>
+        <hr />
+      </div>
+    </div>
+ 
+    <div class="row">
+      <div class="large-9 columns" role="content">
+        {{ content }}
       </div>
  
-      <!-- End Nav -->
- 
- 
-      <!-- Main Page Content and Sidebar -->
- 
-      <div class="row">
- 
-        <!-- Main Blog Content -->
-        <div class="large-9 columns" role="content">
- 
-          {{ content }}
- 
-        </div>
- 
-        <!-- End Main Content -->
- 
- 
-        <!-- Sidebar -->
- 
-        <aside class="large-3 columns">
- 
- 
- 
- 
-          <h5>Tags</h5>
-          <ul class="side-nav">
+      <aside class="large-3 columns">
+        <h5>Tags</h5>
+        <ul class="side-nav">
+          {% for tag in site.tags %}
+          <li><a href="{{ post.url }}">{{ tag[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </aside>
 
-            {% for tag in site.tags %}
-              <li><a href="{{ post.url }}">{{ tag[0] }}</a></li>
-            {% endfor %}
-
-
-            <!-- <li><a href="#">News</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Fun</a></li>
-            <li><a href="#">Weasels</a></li> -->
-          </ul>
+      <aside class="large-3 columns">
+        <h5>Categories</h5>
+        <ul class="side-nav">
+          {% for category in site.categories %}
+          <li><a href="{{ post.url }}">{{ category[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </aside>
+    </div>
  
-          <!-- <div class="panel">
-            <h5>Featured</h5>
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-            <a href="#">Read More →</a>
-          </div> -->
- 
-        </aside>
-
-          <h5>Categories</h5>
-          <ul class="side-nav">
-
-            {% for category in site.categories %}
-              <li><a href="{{ post.url }}">{{ category[0] }}</a></li>
-            {% endfor %}
-
-
-            <!-- <li><a href="#">News</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Fun</a></li>
-            <li><a href="#">Weasels</a></li> -->
-          </ul>
- 
-          <!-- <div class="panel">
-            <h5>Featured</h5>
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-            <a href="#">Read More →</a>
-          </div> -->
- 
-        </aside>
-
-
-
- 
-        <!-- End Sidebar -->
+    <footer class="foot row">
+      <div class="large-12 columns">
+        <hr />
+        <p xmlns:dct="http://purl.org/dc/terms/">
+          <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/"><img src="http://i.creativecommons.org/p/mark/1.0/80x15.png" style="border-style: none;" alt="Public Domain Mark" /></a>
+          This work (<span property="dct:title">Jay, Trying to Remember</span>, by <a href="http://funkfinger.github.io" rel="dct:creator"><span property="dct:title">Jay Wiggins</span></a>), is free of known copyright restrictions.
+        </p>
       </div>
- 
-      <!-- End Main Content and Sidebar -->
- 
- 
-      <!-- Footer -->
- 
-      <footer class="foot row">
-        <div class="large-12 columns">
-          <hr />
-<!--           <div class="row">
-            <div class="large-6 columns">
- -->
-<p xmlns:dct="http://purl.org/dc/terms/">
-<a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
-<img src="http://i.creativecommons.org/p/mark/1.0/80x15.png"
-     style="border-style: none;" alt="Public Domain Mark" />
-</a>
-<!-- <br /> -->
-This work (<span property="dct:title">Jay, Trying to Remember</span>, by <a href="http://funkfinger.github.io" rel="dct:creator"><span property="dct:title">Jay Wiggins</span></a>), is free of known copyright restrictions.
-</p>
-<!--             </div>
-            <div class="large-6 columns">
- -->              <!-- <ul class="inline-list right">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-              </ul> -->
-<!--             </div>
-          </div>
- -->        </div>
-      </footer>
+    </footer>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("UA-15142135-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+
+
+  </body>
+</html>
+
