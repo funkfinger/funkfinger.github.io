@@ -1,3 +1,6 @@
-name: "Jay, Trying to Remember"
+name: "Jay, Trying to Remember..."
+tagline: "this, that, and whatnot"
 markdown: redcarpet
 pygments: true
+timezone: America/Phoenix
+encoding: UTF-8

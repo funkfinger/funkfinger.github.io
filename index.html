@@ -1,13 +1,32 @@
 ---
-layout: default
-title: Jay, Trying to Remember
+layout: foundation
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+
+<div class="large-12 columns" role="content">
+  {% for post in site.posts %}
+
+
+  <!-- Main Blog Content -->
+
+    <article>
+
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <h6>{{ post.date }}</h6>
+      <p>{{ post.content | truncate: 120 }}</p>
+      <!-- <p>{{ post.content | strip_html | strip_newlines | truncate: 120 }}</p> -->
+
+
+    </article>
+
+    <hr />
+
+
+
+  <!-- End Main Content -->
+
+
+
+  {% endfor %}
 </div>
+  
